@@ -30,7 +30,7 @@
 
 
 
-# TegritySpy
+# Summary
 
 TegritySpy is a standalone Windows 10/11 utility for monitoring the global OutputDebugString stream.  
 It captures messages from any process via the `DBWIN_BUFFER` mechanism and displays them in a clean,  
