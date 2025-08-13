@@ -76,7 +76,8 @@ Copy
 Edit
 // Ping TegritySpy to show "DEBUG LINK ESTABLISHED"
 OutputDebugStringW(L"[TC PROBE] NEXUS_PING\n"); ```</Code>)
-Why it matters
+
+## Why it matters
 
 Confirms TegritySpy is receiving from your intended process, not just globally.
 
