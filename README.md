@@ -70,6 +70,7 @@ Updates the UI with DEBUG LINK ESTABLISHED in yellow.
 Optionally clears the status if no pings arrive within a timeout.
 
 Example (paired application):
+
 (<code>```
 cpp
 Copy
