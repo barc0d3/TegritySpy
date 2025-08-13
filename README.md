@@ -52,6 +52,40 @@ dark-mode, split-pane interface for real-time analysis.
 - Monitoring engine logs, driver debug output, or custom probes in real time.
 - Reverse-engineering or QA testing where log visibility is critical.
 
+# Private Link Communication & Nexus Ping
+TegritySpy isn’t just a passive log viewer — it can also act as a paired debug console for your own software.
+
+When paired with a cooperating application, TegritySpy can receive private “control” or “status” messages over the same OutputDebugString channel, using a simple tag-based protocol.
+
+One of the key features is the Nexus Ping:
+
+Your source code can emit a special ping message (tagged WM_APP_NEXUS_PING) to signal a live, active connection.
+
+When TegritySpy receives this ping, it:
+
+Sets its internal g_nexusConnected flag.
+
+Updates the UI status bar to show “DEBUG LINK ESTABLISHED” in yellow.
+
+Can be configured to auto-clear this status after a timeout if no further pings are received.
+
+Example from the paired application’s code:
+
+cpp
+Copy
+Edit
+// Send a "DEBUG LINK ESTABLISHED" ping to TegritySpy
+OutputDebugStringW(L"[TC PROBE] NEXUS_PING\n");
+Why it matters:
+
+Lets you verify that TegritySpy is actively receiving from the intended process, not just listening globally.
+
+Provides a heartbeat-style mechanism — you can use it for automated scripts, connection monitoring, or session handshakes.
+
+Makes it possible to run TegritySpy in environments with many noisy sources while still knowing when your tool is live and linked.
+
+By leveraging this “private line,” you can keep control traffic (like pings, control codes, or state changes) separate from normal debug chatter, making TegritySpy a true paired-operator console for your own code.
+
 ## Building
 
 TegritySpy is pure Win32 C++.
