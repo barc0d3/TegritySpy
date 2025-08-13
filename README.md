@@ -1,4 +1,5 @@
-![TegritySpy screenshot](screenshots/screenshot.jpg)
+![TegritySpy dual-pane debug output window](screenshots/screenshot.jpg)
+
 
 
 # TegritySpy
