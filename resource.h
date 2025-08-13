@@ -1,0 +1,1 @@
+#define IDI_SPYICON 101

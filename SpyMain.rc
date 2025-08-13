@@ -1,0 +1,5 @@
+#include <windows.h>
+
+#define IDI_SPYICON 101
+
+IDI_SPYICON ICON "SpyMain.ico"
