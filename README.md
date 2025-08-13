@@ -1,4 +1,32 @@
-![TegritySpy dual-pane debug output window](screenshots/screenshot.jpg)
+<p align="center">
+  <img src="screenshots/screenshot.jpg" alt="TegritySpy dual-pane debug output" width="880">
+</p>
+
+<h1 align="center">TegritySpy</h1>
+
+<p align="center">
+  Standalone, dark-mode <code>OutputDebugString</code> monitor for Windows 10/11 with split-pane channel filtering, clipboard export, and DBWIN capture.
+</p>
+
+<p align="center">
+  <a href="https://github.com/barc0d3/TegritySpy/releases/tag/TegritySpy">
+    <img src="https://img.shields.io/github/v/tag/barc0d3/TegritySpy?label=release&sort=semver" alt="Latest release">
+  </a>
+  <a href="https://github.com/barc0d3/TegritySpy/releases">
+    <img src="https://img.shields.io/github/downloads/barc0d3/TegritySpy/total.svg" alt="Downloads">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License">
+  </a>
+  <img src="https://img.shields.io/badge/platform-Windows%2010%2F11-2ea44f.svg" alt="Windows 10/11">
+</p>
+
+<p align="center">
+  <a href="https://github.com/barc0d3/TegritySpy/releases/tag/TegritySpy">
+    <img src="https://img.shields.io/badge/⬇%20Download-TegritySpy.exe-111111?labelColor=0d1117" alt="Download TegritySpy">
+  </a>
+</p>
+
 
 
 
