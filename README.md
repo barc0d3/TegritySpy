@@ -70,12 +70,12 @@ Updates the UI with DEBUG LINK ESTABLISHED in yellow.
 Optionally clears the status if no pings arrive within a timeout.
 
 Example (paired application):
-
+(<code>```
 cpp
 Copy
 Edit
 // Ping TegritySpy to show "DEBUG LINK ESTABLISHED"
-OutputDebugStringW(L"[TC PROBE] NEXUS_PING\n");
+OutputDebugStringW(L"[TC PROBE] NEXUS_PING\n"); </Code>)
 Why it matters
 
 Confirms TegritySpy is receiving from your intended process, not just globally.
