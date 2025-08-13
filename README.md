@@ -1,4 +1,5 @@
-![TegritySpy screenshot](screenshots/screenshot.png)
+![TegritySpy screenshot](screenshots/screenshot.jpg)
+
 
 # TegritySpy
 
