@@ -52,39 +52,39 @@ dark-mode, split-pane interface for real-time analysis.
 - Monitoring engine logs, driver debug output, or custom probes in real time.
 - Reverse-engineering or QA testing where log visibility is critical.
 
-# Private Link Communication & Nexus Ping
-TegritySpy isn’t just a passive log viewer — it can also act as a paired debug console for your own software.
+## Private Link Communication & Nexus Ping
+TegritySpy can operate as a paired debug console for your own software, not just a passive log viewer.
 
-When paired with a cooperating application, TegritySpy can receive private “control” or “status” messages over the same OutputDebugString channel, using a simple tag-based protocol.
+When paired with a cooperating application, it can receive private control or status messages over the OutputDebugString channel using a simple tag-based protocol.
 
-One of the key features is the Nexus Ping:
+One key feature: Nexus Ping
 
-Your source code can emit a special ping message (tagged WM_APP_NEXUS_PING) to signal a live, active connection.
+Your app sends a ping tagged WM_APP_NEXUS_PING to confirm an active link.
 
-When TegritySpy receives this ping, it:
+TegritySpy reacts instantly:
 
-Sets its internal g_nexusConnected flag.
+Sets an internal g_nexusConnected flag.
 
-Updates the UI status bar to show “DEBUG LINK ESTABLISHED” in yellow.
+Updates the UI with DEBUG LINK ESTABLISHED in yellow.
 
-Can be configured to auto-clear this status after a timeout if no further pings are received.
+Optionally clears the status if no pings arrive within a timeout.
 
-Example from the paired application’s code:
+Example (paired application):
 
 cpp
 Copy
 Edit
-// Send a "DEBUG LINK ESTABLISHED" ping to TegritySpy
+// Ping TegritySpy to show "DEBUG LINK ESTABLISHED"
 OutputDebugStringW(L"[TC PROBE] NEXUS_PING\n");
-Why it matters:
+Why it matters
 
-Lets you verify that TegritySpy is actively receiving from the intended process, not just listening globally.
+Confirms TegritySpy is receiving from your intended process, not just globally.
 
-Provides a heartbeat-style mechanism — you can use it for automated scripts, connection monitoring, or session handshakes.
+Works as a heartbeat for scripts, connection monitoring, or handshakes.
 
-Makes it possible to run TegritySpy in environments with many noisy sources while still knowing when your tool is live and linked.
+Cuts through noisy logs by separating control traffic from normal debug output.
 
-By leveraging this “private line,” you can keep control traffic (like pings, control codes, or state changes) separate from normal debug chatter, making TegritySpy a true paired-operator console for your own code.
+Turns TegritySpy into a real paired-operator console for your tools.
 
 ## Building
 
