@@ -1,3 +1,5 @@
+![TegritySpy screenshot](screenshots/screenshot.png)
+
 # TegritySpy
 
 TegritySpy is a standalone Windows 10/11 utility for monitoring the global OutputDebugString stream.  
